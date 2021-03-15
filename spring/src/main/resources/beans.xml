@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--告诉spring创建对象:
+        1.声明bean,就是告诉spring要创建某个类的对象
+        2.id:对象的自定义名称,唯一值.spring通过这个名称找到对象
+        3.class:类的全限定名称(不能是接口,因为spring是通过反射机制来创建对象,必须使用类)
+        4.一个bean标签创建一个java对象
+    -->
+    <bean id="someService" class="top.top234.ssm.service.impl.SomeServiceImpl"/>
+    <bean id="someService1" class="top.top234.ssm.service.impl.SomeServiceImpl"/>
+
+    <!--使用soring创建非自定义类的对象-->
+    <bean id="date" class="java.util.Date"/>
+
+</beans>
+        <!--
+            spring的配置文件:
+            1.beans是根标签,spring把java对象称为bean
+            2.spring-beans.xsd 是约束文件,和mybatis中的dtd是一样的
+        -->
