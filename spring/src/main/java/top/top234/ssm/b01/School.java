@@ -1,0 +1,39 @@
+package top.top234.ssm.b01;
+
+/**
+ * Don't forget to be awesome!
+ *
+ * Created by LEARNING on 2021/3/16 0:19.
+ *
+ * ********************************
+ *
+ * @author top234
+ */
+public class School {
+    private String name;
+    private String address;
+
+    @Override
+    public String toString() {
+        return "School{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                '}';
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+}

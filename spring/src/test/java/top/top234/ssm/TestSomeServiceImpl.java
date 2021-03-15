@@ -20,7 +20,7 @@ import top.top234.ssm.service.SomeService;
  *         1.ClassPathXmlApplicationContext:从类路径中加载spring的配置文件
  *         2.FileSystemXmlApplicationContext:从本机磁盘中加载spring的配置文件
  */
-public class Test1 {
+public class TestSomeServiceImpl {
     /**
      * 使用spring容器创建并获取对象
      */

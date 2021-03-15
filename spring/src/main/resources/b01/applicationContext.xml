@@ -8,14 +8,36 @@
             1.基于xml配置
             2.基于注解,使用spring中的注解
         di的语法分类:
-            1.set注入(设置注入):spring调用类的方法,使用set方法实现属性赋值
+            1.set注入(设值注入):spring调用类的方法,使用set方法实现属性赋值
             2.构造注入,spring调用类的有参数构造方法创建对象并为属性赋值
 
         简单类型:spring中规定java的基本数据类型和String字符串都是简单类型
     -->
-    <!--1.简单类型的set注入-->
+    <!--
+        1.set注入:
+            1).简单类型的set注入-->
     <bean id="student" class="top.top234.ssm.b01.Student">
         <property name="id" value="9008"/>
         <property name="name" value="alex"/>
     </bean>
+
+    <!--2).引用类型的set注入-->
+    <bean id="student2" class="top.top234.ssm.b01.Student">
+        <property name="name" value="lisi"/>
+        <property name="id" value="9003"/>
+        <!--ref的值为一个bean的id值-->
+        <property name="school" ref="school"/>
+    </bean>
+
+    <!--声明School对象-->
+    <bean id="school" class="top.top234.ssm.b01.School">
+        <property name="name" value="qinghua"/>
+        <property name="address" value="beijinghandian"/>
+    </bean>
+
+
+    <!--2.构造注入:
+
+    -->
+
 </beans>
