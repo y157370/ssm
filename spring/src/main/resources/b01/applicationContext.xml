@@ -56,4 +56,24 @@
         <constructor-arg value="wang"/>
         <constructor-arg ref="school"/>
     </bean>
+
+
+    <!--引用类型的自动注入:autowire
+            spring框架根据某些规则可以自动给引用类型赋值
+        byName:名称注入,按照引用类型的属性名与spring容器中bean的id匹配实现自动注入
+    -->
+    <bean id="student5" class="top.top234.ssm.b01.Student" autowire="byName">
+        <property name="id" value="91008"/>
+        <property name="name" value="alex"/>
+    </bean>
+
+    <!--引用类型的自动注入:spring框架根据某些规则可以自动给引用类型赋值
+        byType:类型注入,java类中引用类型的数据类型和spring容器中的bean的class属性是同源关系的
+            同源关系:1.同一个类型,2.有继承关系的类型,3.有实现关系的类型
+    -->
+    <bean id="student6" class="top.top234.ssm.b01.Student" autowire="byType">
+        <property name="id" value="11008"/>
+        <property name="name" value="alex+55"/>
+    </bean>
+
 </beans>

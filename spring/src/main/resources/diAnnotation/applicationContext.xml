@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!--依赖注入之注解方式,声明组件扫描器(component-scan),组件就是java对象
+        base-package:指定需要扫描的包
+        component-scan的工作方式:spring会扫描指定的包及其所有子包中所有的类,找到类中额注解,按照注解的功能创建对象或给属性赋值
+    -->
+    <context:component-scan base-package="top.top234.ssm.diAnnotation"/>
+
+    <!--指定多个包的三种方式:
+        1.多次使用组件扫描器
+            <context:component-scan base-package="top.top234.ssm.diAnnotation1"/>
+            <context:component-scan base-package="top.top234.ssm.diAnnotation2"/>
+        2.使用分割符(,或;)分割多个包名
+            <context:component-scan base-package="top.top234.ssm.diAnnotation2;top.top234.ssm.diAnnotation2"/>
+        3.指定父包:原则上不要扫描不含注解的包,会拖慢项目的启动速度
+            <context:component-scan base-package="top.top234.ssm"/>
+    -->
+
+</beans>

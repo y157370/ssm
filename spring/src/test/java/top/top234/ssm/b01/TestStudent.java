@@ -13,6 +13,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * ********************************
  *
  * @author top234
+ *
+ * spring基于xml文件的配置方式
  */
 public class TestStudent {
     private static ApplicationContext ac;
@@ -36,15 +38,26 @@ public class TestStudent {
     }
 
     @Test
-    public void t3(){
+    public void t3() {
         Student student3 = (Student) ac.getBean("student3");
         System.out.println(student3);
     }
+
     @Test
-    public void t4(){
+    public void t4() {
         Student student4 = (Student) ac.getBean("student4");
         System.out.println(student4);
     }
 
+    @Test
+    public void t5() {
+        Student student5 = (Student) ac.getBean("student5");
+        System.out.println(student5 );
+    }
 
+    @Test
+    public void t6() {
+        Student student = (Student) ac.getBean("student6");
+        System.out.println(student);
+    }
 }

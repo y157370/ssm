@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--spring-total表示主配置文件:主要用来包含其他配置文件,主配置文件中一般不定义对象
+        语法: <import resource="其他配置文件的路径"/>
+        关键字:classpath,表示类路径
+        在加载主配置文件时会自动加载import标签导入的所有配置文件
+        通配符匹配导入:(*: 表示任意字符)
+            <import resource="classpath:b01/spring-*.xml"/>
+            表示把在类路径的下b01文件夹下的所有以"spring-"开头的xml配置文件导入(
+            注意:
+                主配置文件不能符合该匹配规则,否则会造成死循环
+                使用通配符匹配时必须包含目录,如:b01/spring-*.xml)
+    -->
+    <import resource="classpath:beans.xml"/>
+    <import resource="classpath:b01/applicationContext.xml"/>
+
+</beans>
