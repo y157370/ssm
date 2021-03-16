@@ -34,4 +34,17 @@ public class TestStudent {
         Student student2 = (Student) ac.getBean("student2");
         System.out.println(student2);
     }
+
+    @Test
+    public void t3(){
+        Student student3 = (Student) ac.getBean("student3");
+        System.out.println(student3);
+    }
+    @Test
+    public void t4(){
+        Student student4 = (Student) ac.getBean("student4");
+        System.out.println(student4);
+    }
+
+
 }

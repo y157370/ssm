@@ -14,6 +14,15 @@ public class Student {
     private String name;
     private School school;
 
+    public Student() {
+    }
+
+    public Student(int id, String name, School school) {
+        this.id = id;
+        this.name = name;
+        this.school = school;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
