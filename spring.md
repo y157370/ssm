@@ -16,3 +16,5 @@ image-url: http://static.top234.top/img/mdpic/future-code/ssm/mdpic/spring/
 
 ##### 切入点表达式
 
+![](mdpic/spring/clip_image001.png)
+
