@@ -11,4 +11,6 @@ package top.top234.ssm.service;
  */
 public interface SomeService {
     void doSome(String name,Integer age);
+    String doOther(String name);
+    Student toStudent();
 }
